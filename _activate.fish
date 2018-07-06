@@ -32,9 +32,9 @@ function _setvenv
     if [ $status != 0 ]
         echo "Couldn't find a virtualenv. Looked for $venv_dir/ here and in all parents" 1>&2
         echo "Usage: ./activate.fish [venv dir=.venv] [initial search path=./]" 1>&2
-        exit 1
+        return 1
     else
-        # Give some feedback if we found the virtual env directory somewhere other than the currenct directory
+        # Give some feedback if we found the virtual env directory somewhere other than the current directory
         if [ $cwd != (pwd) ]
             echo "Found virtualenv $venv_dir/ in: $cwd"
         end
@@ -64,7 +64,7 @@ function _setvenv
                 _old_fish_prompt
             end
         end
-        exit 0
+        return 0
     end
 end
 

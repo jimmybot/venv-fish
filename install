@@ -1,0 +1,13 @@
+#!/usr/bin/env fish
+read -P 'Directory in your PATH to install to: ' -l install_path
+if test -n "$install_path"
+    switch $install_path
+    case "~/*"
+        set install_path (string replace -r '^~/(.*)$' "$HOME/\$1" $install_path)
+    end
+    echo "Copying to $install_path"
+    cp activate.fish "$install_path/activate.fish"
+    cp _activate.fish "$install_path/_activate.fish"
+else
+    echo "No directory given, unable to install!" 1>&2
+end

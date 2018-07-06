@@ -9,9 +9,12 @@ Other features:
 * Safety and isolation: Activates the virtualenv in a subshell so there's no pollution of the environment and no cleanup needed
 * Easy of use: Will recursively look for a virtualenv directory named .venv in any parent directory so you can activate from anywhere
 * Explicit: Shows the project name in the prompt
+* Simple: Besides some logic to recursively look in parent directories for a virtual env directory, there is very little logic needed here at all
 
 ## Installation
-Put these two fish scripts in your PATH.  Put them in the same directory because one refers to the other.
+Run ./install
+
+You will be prompted to specify a directory in your PATH to install to
 
 ## Usage
 Continue to use venv or virtual-env or other wrappers to create your virtual environments.  Then, ignore the local activate/deactivate scripts and instead use:
