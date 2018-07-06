@@ -31,6 +31,7 @@ function _setvenv
     _findvenv $argv[1] $argv[2]
     if [ $status != 0 ]
         echo "Couldn't find a virtualenv. Looked for $venv_dir/ here and in all parents" 1>&2
+        echo "Usage: ./activate.fish [venv dir=.venv] [initial search path=./]" 1>&2
         exit 1
     else
         # Give some feedback if we found the virtual env directory somewhere other than the currenct directory
