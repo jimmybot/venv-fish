@@ -14,7 +14,7 @@ Other features:
 Put these two fish scripts in your PATH.  Put them in the same directory because one refers to the other.
 
 ## Usage
-Activate: ```path/to/activate.fish```
-Deactivate: <ctrl-d> (exit the subshell, no cleanup needed!)
+* Activate: ```path/to/activate.fish```
+* Deactivate: <ctrl-d> (exit the subshell, no cleanup needed!)
 
 I would suggest using a function to alias it to something shorter.
