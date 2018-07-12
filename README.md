@@ -19,6 +19,8 @@ You will be prompted to specify a directory in your PATH to install to
 ## Usage
 Continue to use venv or virtual-env or other wrappers to create your virtual environments.  Then, ignore the local activate/deactivate scripts and instead use:
 * Activate: ```path/to/activate.fish```
+  * See the virtual env directory using: echo $VIRTUAL_ENV
+  * See the project name (name of directory that contains virtual env directory): echo $VIRTUAL_ENV_PROJECT
 * Deactivate: <ctrl-d> (exit the subshell, no cleanup needed!)
 
 I would suggest using a function to alias it to something shorter.

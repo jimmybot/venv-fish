@@ -39,6 +39,7 @@ function _setvenv
             echo "Found virtualenv $venv_dir/ in: $cwd"
         end
         set -gx VIRTUAL_ENV $cwd/.venv
+        set -gx VIRTUAL_ENV_PROJECT (basename (dirname $VIRTUAL_ENV))
         set -gx PATH "$VIRTUAL_ENV/bin" $PATH
 
         # unset PYTHONHOME if set
@@ -57,7 +58,7 @@ function _setvenv
                 # Save the return status of the last command
                 set -l old_status $status
                 # Prepend env
-                printf "(%s) " (basename (dirname "$VIRTUAL_ENV"))
+                printf "(%s) " $VIRTUAL_ENV_PROJECT
 
                 # Restore the return status of the previous command.
                 echo "exit $old_status" | .
